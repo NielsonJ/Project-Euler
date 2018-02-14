@@ -1,4 +1,4 @@
-import time as time
+import time
 
 # Question:
 # If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23.
@@ -17,7 +17,7 @@ def methode1():
     five.excludeMultiplicatives(3)
     total = sum(three.multiplicatives) + sum(five.multiplicatives)
     end = time.clock()
-    print('sum: ' + str(total))
+    print('answer: ' + str(total))
     print('time: ' + str(end - start))
 
 def methode2():
@@ -29,7 +29,7 @@ def methode2():
         if x % 3 == 0 or x % 5 ==0:
             total = total + x
     end = time.clock()
-    print('sum ' + str(total))
+    print('answer: ' + str(total))
     print('time: ' + str(end - start))
 
     

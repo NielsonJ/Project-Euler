@@ -5,12 +5,24 @@ class Prime:
     def __init__(self):
         self.primeList = [2]
 
-    def get_prime_by_index(self, n):
-        self.primeList.append(n)
-        return -1
+    def getByIndex(self, n):
+        number = self.primeList[-1]
+        while n > len(self.primeList) - 1:
+            number += 1
+            primeConfirmed = True
+            for prime in self.primeList:
+                if number % prime == 0:
+                    primeConfirmed = False
+                    break
+            if primeConfirmed == True:
+                self.primeList.append(number)
+        return self.primeList[n]
 
-    def get_prime_list(self):
+    def getList(self):
         return self.primeList
 
-    def add_prime(self, n):
-        self.primeList.append(n)
+if __name__ == '__main__':
+    print('This is a class library')
+    print('This library provides class for prime calculations')
+    print('Writen by Nielson Janné')
+    print('This will not execute a script')
