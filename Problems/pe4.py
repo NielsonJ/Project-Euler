@@ -7,6 +7,7 @@ def main():
     start = time.clock()
     answer = 0
     data = []
+    # Check all multiplications from 999 to 100 (3 digits)
     for x in range(100,999):
         for y in range(100,999):
             multiplication = x * y
@@ -19,6 +20,7 @@ def main():
     print('time: ' + str(end - start))
 
 def checkPalindrome(number):
+    # Convert to string, reverse, compare.
     if str(number) == str(number)[::1]:
         return True
     else:
