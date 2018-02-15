@@ -19,7 +19,5 @@ import bisect
 # 10001ste prime is 104743
 
 prime = Prime()
-print(prime.checkIfPrime(104743))
-print(prime.getCalcedList())
-print(prime.getByIndex(10001))
+print(prime.getByIndex(100000))
 print(prime.getCalcedList())
