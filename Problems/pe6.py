@@ -19,9 +19,9 @@ def main():
         sumOfSquares += x**2
         squaresOfSum += x        
     squaresOfSum = squaresOfSum**2
-    asnwer = squaresOfSum - sumOfSquares
+    answer = squaresOfSum - sumOfSquares
     end = time.clock()
-    print('answer: ' + str(asnwer))
+    print('answer: ' + str(answer))
     print('time: ' + str(end - start))
 
 if __name__ == '__main__':

@@ -18,7 +18,7 @@ class Prime:
                 self.__primeList.append(number)
         return self.__primeList[n]
 
-    def getFullList(self):
+    def getCalcedList(self):
         return self.__primeList
 
     def getFirst(self, number):

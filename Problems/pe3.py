@@ -21,7 +21,7 @@ def main():
                 break
         primeIndex += 1
     end = time.clock()
-    print('asnwer: ' + str(highestPrime))
+    print('answer: ' + str(highestPrime))
     print('time: ' + str(end - start))
     
 if __name__ == '__main__':
