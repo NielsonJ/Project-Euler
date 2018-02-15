@@ -32,8 +32,6 @@ def methode2():
     print('answer: ' + str(total))
     print('time: ' + str(end - start))
 
-    
-
 class TimesTable:
     def __init__(self, number):
         self.number = number

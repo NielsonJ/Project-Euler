@@ -1,8 +1,6 @@
 from libs.primelib import Prime
 import time
 
-
-
 prime = Prime()
 start = time.clock()
 print(prime.getByIndex(0))
