@@ -8,6 +8,7 @@ import time
 LIMIT = 4000000
 
 def main():
+    print('script started ...')
     start = time.clock()
     total = 0
     previousNumber = 1

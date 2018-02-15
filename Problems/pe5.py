@@ -5,6 +5,25 @@ import time
 # What is the smallest positive number that is evenly divisible by all of the numbers from 1 to 20?
 
 def main():
+    print('script started ...')
+    start = time.clock()
+    prime = Prime()
+    index = 2
+    number = 1
+    while index < 21:
+        tryNumber = number
+        primeIndex = 0
+        while tryNumber % index!= 0:
+            tryNumber = number * prime.getByIndex(primeIndex)
+            primeIndex += 1
+        number = tryNumber
+        index += 1
+    end = time.clock()
+    print('answer: ' + str(number))
+    print('time: ' + str(end - start))    
+
+def oldInefficient():
+    print('script started ...')
     start = time.clock()
     number = 0
     evenlyDivisible = False
@@ -21,3 +40,5 @@ def main():
 
 if __name__ == '__main__':
     main()
+    print()
+    oldInefficient()

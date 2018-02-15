@@ -8,6 +8,7 @@ import time
 NUMBER = 600851475143
 
 def main():
+    print('script started ...')
     start = time.clock()
     number = NUMBER
     prime = Prime()

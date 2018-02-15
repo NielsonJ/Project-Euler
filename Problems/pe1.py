@@ -6,32 +6,6 @@ import time
 
 LIMIT = 1000
 
-def methode1():
-    # Attempt one, the shitty one
-    print('methode one:')
-    start = time.clock()
-    three = TimesTable(3)
-    five = TimesTable(5)
-    three.findMultiplicatives(LIMIT)
-    five.findMultiplicatives(LIMIT)
-    five.excludeMultiplicatives(3)
-    total = sum(three.multiplicatives) + sum(five.multiplicatives)
-    end = time.clock()
-    print('answer: ' + str(total))
-    print('time: ' + str(end - start))
-
-def methode2():
-    # Attempt two, yes baby.
-    print('methode two:')
-    total = 0
-    start = time.clock()
-    for x in range(0, LIMIT):
-        if x % 3 == 0 or x % 5 ==0:
-            total = total + x
-    end = time.clock()
-    print('answer: ' + str(total))
-    print('time: ' + str(end - start))
-
 class TimesTable:
     def __init__(self, number):
         self.number = number
@@ -49,6 +23,32 @@ class TimesTable:
             if x % number == 0:
                 self.multiplicatives.remove(x)
         pass
+
+def methode1():
+    # Attempt one, the shitty one
+    print('script started ...')
+    start = time.clock()
+    three = TimesTable(3)
+    five = TimesTable(5)
+    three.findMultiplicatives(LIMIT)
+    five.findMultiplicatives(LIMIT)
+    five.excludeMultiplicatives(3)
+    total = sum(three.multiplicatives) + sum(five.multiplicatives)
+    end = time.clock()
+    print('answer: ' + str(total))
+    print('time: ' + str(end - start))
+
+def methode2():
+    # Attempt two, yes baby.
+    print('script started ...')
+    total = 0
+    start = time.clock()
+    for x in range(0, LIMIT):
+        if x % 3 == 0 or x % 5 ==0:
+            total = total + x
+    end = time.clock()
+    print('answer: ' + str(total))
+    print('time: ' + str(end - start))
     
 if __name__ == '__main__':
     methode1()
