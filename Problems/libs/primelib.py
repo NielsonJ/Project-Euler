@@ -3,23 +3,23 @@
 
 class Prime:
     def __init__(self):
-        self.primeList = [2]
+        self.__primeList = [2]
 
     def getByIndex(self, n):
-        number = self.primeList[-1]
-        while n > len(self.primeList) - 1:
+        number = self.__primeList[-1]
+        while n > len(self.__primeList) - 1:
             number += 1
             primeConfirmed = True
-            for prime in self.primeList:
+            for prime in self.__primeList:
                 if number % prime == 0:
                     primeConfirmed = False
                     break
             if primeConfirmed == True:
-                self.primeList.append(number)
-        return self.primeList[n]
+                self.__primeList.append(number)
+        return self.__primeList[n]
 
     def getList(self):
-        return self.primeList
+        return self.__primeList
 
 if __name__ == '__main__':
     print('This is a class library for prime handling')
