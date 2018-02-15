@@ -22,7 +22,5 @@ class Prime:
         return self.primeList
 
 if __name__ == '__main__':
-    print('This is a class library')
-    print('This library provides class for prime calculations')
+    print('This is a class library for prime handling')
     print('Writen by Nielson Janné')
-    print('This will not execute a script')

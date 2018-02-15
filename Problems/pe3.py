@@ -8,8 +8,8 @@ import time
 NUMBER = 600851475143
 
 def main():
-    number = NUMBER
     start = time.clock()
+    number = NUMBER
     prime = Prime()
     primeIndex = 0
     while number != 1:
