@@ -18,8 +18,13 @@ class Prime:
                 self.__primeList.append(number)
         return self.__primeList[n]
 
-    def getList(self):
+    def getFullList(self):
         return self.__primeList
+
+    def getFirst(self, number):
+        if number > len(self.__primeList):
+            self.getByIndex(number - 1)
+        return self.__primeList[:number]
 
 if __name__ == '__main__':
     print('This is a class library for prime handling')
