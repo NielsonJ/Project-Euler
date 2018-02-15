@@ -1,4 +1,5 @@
 import time
+import numpy as np
 
 # In the 20×20 grid below, four numbers along a diagonal line have been marked in red.
 
@@ -27,15 +28,51 @@ import time
 
 # What is the greatest product of four adjacent numbers in the same direction (up, down, left, right, or diagonally) in the 20×20 grid?
 
+FILE_LOCATION = 'Problems/pe11.txt'
+
 def main():
-    file = open('pe11.txt', 'r',1)
-    file.close()
+    print('Reading file at: ' + FILE_LOCATION)
+    f = open(FILE_LOCATION, 'r')
+    arr = np.zeros((23,23))
+    for y in range(0,20):
+        for x in range(0,20):
+            arr[y,x] = int(f.readline(2))
+            f.readline(1) 
+    f.close()
+    print('Reading complete\n')
 
     print('script started ...')
     start = time.clock()
     answer = 0
+    # arr[row,column]
+    for row in range(0,20):
+        for column in range(0,20):
+            # east
+            product = 1
+            for x in range(0,4):
+                product *= arr[row, column + x]
+            if product > answer:
+                answer = product
+            # east-south
+            product = 1
+            for x in range(0,4):
+                product *= arr[row + x, column + x]
+            if product > answer:
+                answer = product
+            # south
+            product = 1
+            for x in range(0,4):
+                product *= arr[row + x, column]
+            if product > answer:
+                answer = product
+            # south-west
+            product = 1
+            for x in range(0,4):
+                product *= arr[row + x, column - x]
+            if product > answer:
+                answer = product
     end = time.clock()
-    print('answer: ' + str(answer))
+    print('answer: ' + str(int(answer)))
     print('time: ' + str(end - start))
 
 if __name__ == '__main__':
