@@ -3,18 +3,27 @@ import math
 class Prime:
     def __init__(self):
         self.__primeList = [2,3]
+        self.__checkList = [1,1]
 
     def getByIndex(self, n):
         number = self.__primeList[-1]
         while n > len(self.__primeList) - 1:
             number += 2
-            if self.checkIfPrime(number) == True:
+            if self.__checkIfPrime(number) == True:
                 self.__primeList.append(number)
         return self.__primeList[n]
 
     def checkIfPrime(self, number):
-        while number > self.__primeList[-1]**2:
+        # Sqrt(number) once or power primelist[-1] every iteration.
+        # Current method is optimized for larger numbers
+        root = math.sqrt(number)
+        while root > self.__primeList[-1]:
             self.getByIndex(len(self.__primeList))
+        return self.__checkIfPrime(number)
+
+    def __checkIfPrime(self, number):
+        # Sqrt(number) once or power primelist[-1] every iteration.
+        # Current method is optimized for larger numbers
         root = math.sqrt(number)
         for prime in self.__primeList:            
             if number % prime == 0:
