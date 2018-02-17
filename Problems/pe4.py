@@ -3,13 +3,15 @@ import time
 # A palindromic number reads the same both ways. The largest palindrome made from the product of two 2-digit numbers is 9009 = 91 × 99.
 # Find the largest palindrome made from the product of two 3-digit numbers.
 
+LIMIT = [100,999]
+
 def main():
     start = time.clock()
     answer = 0
     data = []
     # Check all multiplications from 999 to 100 (3 digits)
-    for x in range(100,999):
-        for y in range(100,999):
+    for x in range(LIMIT[0], LIMIT[1]):
+        for y in range(LIMIT[0], LIMIT[1]):
             multiplication = x * y
             if checkPalindrome(multiplication):
                 if multiplication > answer:
@@ -21,7 +23,7 @@ def main():
 
 def checkPalindrome(number):
     # Convert to string, reverse, compare.
-    if str(number) == str(number)[::1]:
+    if str(number) == str(number)[::-1]:
         return True
     else:
         return False
