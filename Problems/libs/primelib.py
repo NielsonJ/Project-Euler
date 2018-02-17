@@ -22,6 +22,7 @@ class Prime:
         return self.__checkIfPrime(number)
 
     def __checkIfPrime(self, number):
+        # This function works under the premises that self.__primeList has enough primes te determine prime.
         # Sqrt(number) once or power primelist[-1] every iteration.
         # Current method is optimized for larger numbers
         root = math.sqrt(number)
@@ -30,7 +31,7 @@ class Prime:
                 return False
             if prime > root:
                 return True
-        return True
+        raise Exception('primelib.Prime() error: Not enough known primes in self.__primelist to determine prime')
 
     def getCalcedList(self):
         return self.__primeList
