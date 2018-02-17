@@ -6,11 +6,12 @@ import time
 
 LIMIT = 1000
 
+
 class TimesTable:
     def __init__(self, number):
         self.number = number
         self.multiplicatives = []
-    
+
     def findMultiplicatives(self, limit):
         for x in range(1, limit):
             if (x * self.number) >= limit:
@@ -23,6 +24,7 @@ class TimesTable:
             if x % number == 0:
                 self.multiplicatives.remove(x)
         pass
+
 
 def methode1():
     # Attempt one, the shitty one
@@ -38,18 +40,20 @@ def methode1():
     print('answer: ' + str(total))
     print('time: ' + str(end - start))
 
+
 def methode2():
     # Attempt two, yes baby.
     print('script started ...')
     total = 0
     start = time.clock()
     for x in range(0, LIMIT):
-        if x % 3 == 0 or x % 5 ==0:
+        if x % 3 == 0 or x % 5 == 0:
             total = total + x
     end = time.clock()
     print('answer: ' + str(total))
     print('time: ' + str(end - start))
-    
+
+
 if __name__ == '__main__':
     methode1()
     print()

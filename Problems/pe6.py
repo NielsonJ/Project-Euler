@@ -10,19 +10,21 @@ import time
 
 LIMIT = 100
 
+
 def main():
     print('script started ...')
     start = time.clock()
     sumOfSquares = 0
     squaresOfSum = 0
-    for x in range(1,LIMIT + 1):
+    for x in range(1, LIMIT + 1):
         sumOfSquares += x**2
-        squaresOfSum += x        
+        squaresOfSum += x
     squaresOfSum = squaresOfSum**2
     answer = squaresOfSum - sumOfSquares
     end = time.clock()
     print('answer: ' + str(answer))
     print('time: ' + str(end - start))
+
 
 if __name__ == '__main__':
     main()

@@ -8,21 +8,23 @@ import math
 # There exists exactly one Pythagorean triplet for which a + b + c = 1000.
 # Find the product abc.
 
+
 def main():
     print('script started ...')
     start = time.clock()
     answer = 0
-    for a in range(1,334):
-        for b in range(a+1,500):
+    for a in range(1, 334):
+        for b in range(a + 1, 500):
             c = math.sqrt(a**2 + b**2)
             if a + b + c == 1000:
                 answer = a * b * c
                 break
         if answer != 0:
-            break  
+            break
     end = time.clock()
     print('answer: ' + str(int(answer)))
     print('time: ' + str(end - start))
+
 
 if __name__ == '__main__':
     main()

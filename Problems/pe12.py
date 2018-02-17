@@ -20,22 +20,24 @@ import math
 
 # What is the value of the first triangle number to have over five hundred divisors?
 
+
 def main():
     print('script started ...')
     start = time.clock()
-    
+
     index = 0
     while True:
         index += 1
         value = getValueOfTriNum(index)
         factors = getAmountFactorsOf(value)
-        if  factors > 500:
+        if factors > 500:
             answer = value
             break
 
     end = time.clock()
     print('answer: ' + str(answer))
     print('time: ' + str(end - start))
+
 
 def getAmountFactorsOf(value):
     # Following algorithm checks for factors up to sqrt(value),
@@ -46,7 +48,8 @@ def getAmountFactorsOf(value):
         return 1
     else:
         factors = 2
-        checkUpTo = int(math.sqrt(value)) # division returns float, convert int
+        checkUpTo = int(
+            math.sqrt(value))  # division returns float, convert int
         # if value % checkUpTo == 0:
         if checkUpTo**2 == value:
             factors += 1
@@ -56,12 +59,14 @@ def getAmountFactorsOf(value):
                 factors += 2
         return factors
 
+
 def getValueOfTriNum(n):
     # Get value of n'th triangle number
     trianglenumber = 0
     for x in range(0, n + 1):
         trianglenumber += x
     return trianglenumber
+
 
 if __name__ == '__main__':
     main()

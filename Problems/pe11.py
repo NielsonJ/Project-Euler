@@ -30,14 +30,15 @@ import numpy as np
 
 FILE_LOCATION = 'Problems/pe11.txt'
 
+
 def main():
     print('Reading file at: ' + FILE_LOCATION)
     f = open(FILE_LOCATION, 'r')
-    arr = np.zeros((23,23))
-    for y in range(0,20):
-        for x in range(0,20):
-            arr[y,x] = int(f.readline(2))
-            f.readline(1) 
+    arr = np.zeros((23, 23))
+    for y in range(0, 20):
+        for x in range(0, 20):
+            arr[y, x] = int(f.readline(2))
+            f.readline(1)
     f.close()
     print('Reading complete\n')
 
@@ -45,35 +46,36 @@ def main():
     start = time.clock()
     answer = 0
     # arr[row,column]
-    for row in range(0,20):
-        for column in range(0,20):
+    for row in range(0, 20):
+        for column in range(0, 20):
             # east
             product = 1
-            for x in range(0,4):
+            for x in range(0, 4):
                 product *= arr[row, column + x]
             if product > answer:
                 answer = product
             # east-south
             product = 1
-            for x in range(0,4):
+            for x in range(0, 4):
                 product *= arr[row + x, column + x]
             if product > answer:
                 answer = product
             # south
             product = 1
-            for x in range(0,4):
+            for x in range(0, 4):
                 product *= arr[row + x, column]
             if product > answer:
                 answer = product
             # south-west
             product = 1
-            for x in range(0,4):
+            for x in range(0, 4):
                 product *= arr[row + x, column - x]
             if product > answer:
                 answer = product
     end = time.clock()
     print('answer: ' + str(int(answer)))
     print('time: ' + str(end - start))
+
 
 if __name__ == '__main__':
     main()

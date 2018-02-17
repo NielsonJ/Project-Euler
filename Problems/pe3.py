@@ -7,6 +7,7 @@ import time
 
 NUMBER = 600851475143
 
+
 def main():
     print('script started ...')
     start = time.clock()
@@ -23,6 +24,7 @@ def main():
     end = time.clock()
     print('answer: ' + str(highestPrime))
     print('time: ' + str(end - start))
-    
+
+
 if __name__ == '__main__':
     main()

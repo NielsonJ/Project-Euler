@@ -6,6 +6,7 @@ import time
 primeindex = 100000
 primecheck = 1000000000000
 
+
 def main():
     prime = Prime()
     print('test 1:')
@@ -58,6 +59,7 @@ def main():
     print('value: ' + str(value))
     print('time: ' + str(end - start))
     print()
+
 
 if __name__ == '__main__':
     main()

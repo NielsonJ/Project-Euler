@@ -6,6 +6,7 @@ import time
 
 NUMBER = 100010
 
+
 def main():
     print('script started ...')
     start = time.clock()
@@ -14,7 +15,8 @@ def main():
     answer = prime.getByIndex(NUMBER - 1)
     end = time.clock()
     print('answer: ' + str(answer))
-    print('time: ' + str(end - start))    
+    print('time: ' + str(end - start))
+
 
 if __name__ == '__main__':
     main()

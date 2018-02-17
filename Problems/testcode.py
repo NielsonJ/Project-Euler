@@ -10,7 +10,7 @@ import bisect
 # print(prime.getByIndex(10000))
 # end = time.clock()
 # print(end - start)
-# 
+#
 # list = [1,2,3,4,7,8,9,34,45,78,98]
 # print(list)
 # x = 6
