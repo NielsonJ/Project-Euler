@@ -22,7 +22,7 @@ import math
 
 
 def main():
-    print('script started ...')
+    print('Calculating problem 12:')
     start = time.clock()
 
     index = 0
@@ -48,8 +48,8 @@ def getAmountFactorsOf(value):
         return 1
     else:
         factors = 2
-        checkUpTo = int(
-            math.sqrt(value))  # division returns float, convert int
+        # division returns float, convert int
+        checkUpTo = int(math.sqrt(value))
         # if value % checkUpTo == 0:
         if checkUpTo**2 == value:
             factors += 1

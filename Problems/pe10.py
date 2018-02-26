@@ -8,7 +8,7 @@ LIMIT = 2000000
 
 
 def main():
-    print('script started ...')
+    print('Calculating problem 10:')
     start = time.clock()
     prime = Prime()
     index = 0

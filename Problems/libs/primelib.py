@@ -4,7 +4,6 @@ import math
 class Prime:
     def __init__(self):
         self.__primeList = [2, 3]
-        self.__checkList = [1, 1]
 
     def getByIndex(self, n):
         number = self.__primeList[-1]
