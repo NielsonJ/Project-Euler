@@ -36,7 +36,6 @@ def main():
     length = len(numbers)
     answer = 0
     for position in range(0, length - ADJDIGITS - 1):
-        print(numbers[position:position + ADJDIGITS])
         temp = 1
         for number in numbers[position:position + ADJDIGITS]:
             temp *= int(number)
