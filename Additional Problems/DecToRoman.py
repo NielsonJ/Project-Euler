@@ -11,7 +11,7 @@ def main():
         6 : "M"  # 1000
     }
     answer = ""
-    numeralpointer = 0
+    numeralpointer = 0  # increment by two to skip to next power of 10, increment by one to skip to next factor of 5
     for number in reversed(numbers):
         if int(number) < 4:
             answer = (int(number) * numerals[numeralpointer]) + answer
@@ -23,6 +23,7 @@ def main():
             answer = numerals[numeralpointer] + numerals[numeralpointer + 2] + answer
         else:
             print("something went wrong")
+            return
         numeralpointer += 2
     print(answer)
 
