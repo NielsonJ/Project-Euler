@@ -3,7 +3,7 @@ import time
 
 def main():
     print('script started ...')
-    start = time.clock()
+    start = time.perf_counter
 
     answer = (1, 1)
     collatzDict = {1: 1}  # don't recalc
@@ -22,7 +22,7 @@ def main():
         if answer[1] < collatzDict[startNumber]:
             answer = (startNumber, collatzDict[startNumber])
 
-    end = time.clock()
+    end = time.perf_counter
     print('answer: ' + str(answer))
     print('time: ' + str(end - start))
 
