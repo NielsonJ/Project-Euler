@@ -1,10 +1,15 @@
 import time
 import math
 
-# +-+-+-+
-# +-+-+-+
-# +-+-+-+
-# +-+-+-+
+# Each node is accesable by the sum of the previous nodes.
+# Example of ways to each node :
+
+# 1 - 1 - 1  - 1
+# 1 - 2 - 3  - 4
+# 1 - 3 - 6  - 10
+# 1 - 4 - 10 - 20
+
+# The outcome is symmetrical over the diagonal line, calculating one side is sufficient
 
 
 def main():
@@ -28,7 +33,7 @@ def function(gridsize):
                 newgrid.append(newgrid[y] + oldgrid[y + 1])
         # print(newgrid)
         oldgrid = newgrid
-    return oldgrid[-1]
+    return oldgrid[-1]  # return last element in oldgrid's list.
 
 
 if __name__ == '__main__':
